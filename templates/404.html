@@ -1,0 +1,5 @@
+{% extends "layout.html" %}
+{% block title %} 404 Not Found {% endblock %}
+{% block contents %}
+<img src= {{ url_for('static', filename = 'img/404.png') }} alt="" class="img-responsive img-rounded center-block" border="0"/>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block title %} Twitter GIF extractor {% endblock %}
+{% block contents %}
+<h1> Twitter GIF extractor </h1>
+<br>
+<form action = "" method = "POST" >
+	<p> Write down the tweet URL like 'https://twitter.com/a19641sk/status/733608387770884096/'<br> The URL Format is important. the last '/' in URL could be omitted. </p>
+	
+	<input type="text" name="url" />
+	<input type="submit" value="send"/>
+<br>
+{% if gif %}
+	<img src= {{ url_for('static', filename= 'gif/'+ gif ) }} >
+{% endif %}
+</form>
+{% endblock %}
